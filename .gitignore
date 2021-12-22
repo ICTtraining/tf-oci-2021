@@ -8,6 +8,12 @@
 # Crash log files
 crash.log
 
+# Ignore any version constraint locks. Usually, those files can be safely included in
+# version control, because they offer some insight into the actually used provider 
+# version für debugging or audit purposes. Those locks don't make much sense in 
+# educational environments, so we sort them out.
+.terraform.lock.hcl
+
 # Ignore any .tfvars files that are generated automatically for each Terraform run. Most
 # .tfvars files are managed as part of configuration and so should be included in
 # version control.
@@ -26,4 +32,9 @@ override.tf.json
 # !example_override.tf
 
 # Include tfplan files to ignore the plan output of command: terraform plan -out=tfplan
-# example: *tfplan*
+*tfplan*
+
+# Local files containing secrets must not be included in version control.
+my-private-variables.tf
+*private*
+
