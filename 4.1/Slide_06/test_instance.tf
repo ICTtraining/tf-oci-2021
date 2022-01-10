@@ -4,7 +4,7 @@ variable "instance_availability_domain" {
 }
 
 variable "instance_shape" {
-    default = "VM.Standard2.1"
+    default = "VM.Standard.E2.1.Micro"
 }
 
 variable "image_OL8_x64" {
