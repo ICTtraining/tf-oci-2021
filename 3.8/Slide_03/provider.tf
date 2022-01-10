@@ -4,7 +4,7 @@ terraform {
       source = "hashicorp/oci"
       version = "4.57.0"
     }
-   }
+  }
 }
 
 provider "oci" {
@@ -13,4 +13,3 @@ provider "oci" {
   #tenancy_ocid = "ocid1.tenancy.oc1..aaaaaaaaixxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
   #region = "eu-marseille-1"
 }
-
