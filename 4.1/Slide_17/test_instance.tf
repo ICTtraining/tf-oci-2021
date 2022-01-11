@@ -28,4 +28,7 @@ resource "oci_core_instance" "test_instance" {
         source_id = var.image_OL8_x64
         source_type = "image"
     }
+    metadata = {
+        ssh_authorized_keys = var.ssh_public_key
+  }
 }
