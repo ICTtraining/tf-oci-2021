@@ -3,7 +3,6 @@ resource "oci_core_instance" "test_instance" {
     availability_domain = var.instance_availability_domain
     compartment_id = var.compartment_id
     shape = var.instance_shape
-    hostname_label = var.instance_hostname_label
 
     create_vnic_details {
         subnet_id = oci_core_subnet.test_subnet.id

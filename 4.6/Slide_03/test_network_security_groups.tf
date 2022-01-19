@@ -1,7 +1,3 @@
-variable "network_security_group_display_name" {
-    default = "nsg_bastion"
-}
-
 resource "oci_core_network_security_group" "test_network_security_group" {
     #Required
     compartment_id = var.compartment_id
