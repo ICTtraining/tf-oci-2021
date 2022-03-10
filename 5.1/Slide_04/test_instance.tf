@@ -44,8 +44,12 @@ provisioner "remote-exec" {
     }
 
     inline = [
-      "# sudo dnf -y update",                        # may take a lot of time, commented out for purpose of demo
-      "sudo dnf -y install httpd mod_ssl"
+      "# OS package installs take a LOT of time and cause server drift -> just for example",
+      "# HashiCorp recommends using Packer instead of Terraform for software installations",
+      "#sudo dnf update -y",
+      "sudo dnf install -y dnf-plugins-core httpd mod_ssl",
+      "sudo dnf config-manager --add-repo https://rpm.releases.hashicorp.com/RHEL/hashicorp.repo",
+      "sudo dnf install -y vault consul boundary"
     ]
   }
 }
